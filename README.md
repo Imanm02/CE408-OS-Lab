@@ -8,24 +8,24 @@ This repository contains solutions to the assignments for the CE408: Operating S
 ## Table of Contents
 
 - [Overview](#overview)
-- [Assignments](#assignments)
+- [Practices](#practices)
+- [Instructions](#instructions)
 - [Exam](#exam)
-- [Slides](#slides)
 - [Notes](#notes)
 - [Source](#source)
-- [Maintainer](#maintainer)
+- [Maintainers](#maintainers)
 
-## Assignments
+## Practices
 
-In the "Assignments" folder, you will find the solutions to assignments given during the course.
+The "Practices" folder contains the solutions to the practices that were given during the course.
+
+## Instructions
+
+The "Instructions" folder contains any additional course materials used in the practices.
 
 ## Exam
 
 In the "Exam" folder, you will find the solutions to the exams of the course.
-
-## Slides
-
-In the "Slides" folder, you will find the course slides.
 
 ## Notes
 
@@ -35,7 +35,7 @@ In the "Notes" folder, you will find the course notes.
 
 In the "Source" folder, you will find the source of the course.
 
-## Maintainer
+## Maintainers
 
 - [Iman Mohammadi](https://github.com/Imanm02)
 - [Negar Babashah](https://github.com/Negarbsh)
