@@ -16,7 +16,7 @@ Student Name of member 2: Iman Mohammadi
     3. [x] ![image](https://github.com/user-attachments/assets/10793429-2d76-4b91-8a47-56fb787520e0)
     4. [x] ![image](https://github.com/user-attachments/assets/bef89f66-e57c-439d-9ac2-146ee535a1fb)
     5. [x] به ارور Permission Denied می‌خوریم.
-       ![image](https://github.com/user-attachments/assets/8d6a6718-b31e-40f6-8bdf-716733e798d2)
+           ![image](https://github.com/user-attachments/assets/8d6a6718-b31e-40f6-8bdf-716733e798d2)
 
 ## Section 3.3.3
 
@@ -86,11 +86,14 @@ Student Name of member 2: Iman Mohammadi
             ![Screenshot (2699)](https://github.com/user-attachments/assets/f89f78bb-6d97-401f-aa62-7d1b0a169142)
 
 - [x] Write your description about five important files at /proc/sys/kernel:
+
+<div dir="rtl">
     - [x] `panic: مدت زمانی که سیستم پس از وقوع یک کرنل پنیک (kernel panic) قبل از rebootصبر می‌کند را تعیین می‌کند. مقدار دیفالت آن 0 است که یعنی به صورت خودکار reboot انجام نمی‌شود.`
     - [x] `hostname: نام میزبان سیستم را ذخیره می‌کند. این نام برای شناسایی سیستم در شبکه استفاده می‌شود. `
     - [x] `osrelease: نسخه‌ی سیستم‌عامل را نشان می‌دهد. شامل اطلاعاتی درباره‌ی نسخه‌ی کرنلی است که در حال اجراست.`
     - [x]  `threads-max:  حداکثر تعداد تردهایی که سیستم می‌تواند ایجاد کند را مشخص می‌کند. `
     - [x] `msgmax: حداکثر اندازه‌ی پیام‌های صف پیام (message queue) را تعیین می‌کند. واحد اندازه‌گیری آن هم بایت است `
+</div>
 
 - [x] Write your description about /proc/self file
     - [x] `دایرکتوری /proc/self در لینوکس یک symbol link به دایرکتوری پردازه‌ای است که در حال حاضر به این دایرکتوری آمده است. در واقع اگر پردازه‌ی pid=x به این دایرکتوری برود، انگار به دایرکتوری proc/x رفته است. `
