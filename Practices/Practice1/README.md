@@ -1,10 +1,6 @@
-Team Name: `Divar`
-
 Student Name of member 1: `Iman Mohammadi`
-Student No. of member 1: `99102207`
 
 Student Name of member 2: `Negar Babashah`
-Student No. of member 2: `99109325`
 
 - [x] Read Session Contents.
 
