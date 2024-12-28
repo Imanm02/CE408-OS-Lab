@@ -1,9 +1,9 @@
-# CE{Code of Course}-{Short Name of Course}
-Solutions to Prof. {Name of Prof}'s CE{Code of Course}: {Full Name of Course} ({Name of Uni} - {Semester} {Year}) Assignments
+# CE408-OS Lab
+Solutions to Prof. Beigi's CE408: Operating Systems Lab (Sharif University of Technology - Fall 2024) Assignments
 
 ## Overview
 
-This repository contains solutions to the assignments for the CE{Code of Course}: {Full Name of Course} course at the {Name of Uni}, {Semester} {Year}, taught by Prof. {Name of Prof}.
+This repository contains solutions to the assignments for the CE408: Operating Systems Lab course at the Sharif University of Technology, Fall 2024, taught by Prof. Beigi.
 
 ## Table of Contents
 
@@ -38,3 +38,4 @@ In the "Source" folder, you will find the source of the course.
 ## Maintainer
 
 - [Iman Mohammadi](https://github.com/Imanm02)
+- [Negar Babashah](https://github.com/Negarbsh)
