@@ -11,12 +11,12 @@ Student Name of member 2: Iman Mohammadi
 ### Section 3.3.2
 
 - [x] Do 5 subtasks from 1 to 5:
-    1. [x] ![image](https://github.com/user-attachments/assets/06f30082-f154-43b5-991e-00a91bdf8c56)
-    2. [x] ![image](https://github.com/user-attachments/assets/59cafb49-85d8-4203-b701-0d97465c5ef6)
-    3. [x] ![image](https://github.com/user-attachments/assets/10793429-2d76-4b91-8a47-56fb787520e0)
-    4. [x] ![image](https://github.com/user-attachments/assets/bef89f66-e57c-439d-9ac2-146ee535a1fb)
+    1. [x] ![image](https://github.com/user-attachments/assets/4bc69577-42e5-4c14-9ab3-e43d0ca33468)
+    2. [x] ![image](https://github.com/user-attachments/assets/0271c7cf-1c2d-4acb-a14e-5d5720534d55)
+    3. [x] ![image](https://github.com/user-attachments/assets/fc6e5e5c-a812-45dd-b240-439a5c3f611b)
+    4. [x] ![image](https://github.com/user-attachments/assets/2ca9a877-8421-491b-98e2-22f7945b267f)
     5. [x] به ارور Permission Denied می‌خوریم.
-           ![image](https://github.com/user-attachments/assets/8d6a6718-b31e-40f6-8bdf-716733e798d2)
+           ![image](https://github.com/user-attachments/assets/73a15336-d66a-4f40-9ab8-57262a389c38)
 
 ## Section 3.3.3
 
