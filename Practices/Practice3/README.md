@@ -41,14 +41,12 @@ Student Name of member 2: Iman Mohammadi
     8. فایل root هم یک symbolic link به دایرکتوری root برای پردازه است. در مثال من با وارد کردن دستور ls -l /proc/8/root ، خروجی به صورت lrwxrwxrwx 1 root root 0 Oct 31 13:33 /proc/8/root -> / بود.
 
 - [x] Place your script for showing PID of running processes and their name here:
-    - [x] ![image](https://github.com/user-attachments/assets/14c3316e-97f2-4f49-942c-e07e8a29437c)
-
+    - [x] ![image](https://github.com/user-attachments/assets/0739edaa-f82d-44a5-977d-968527f476ec)
 
 - [x] Place your source code for a program that shows details of a program by receiving PID:
-    - [x] ![image](https://github.com/user-attachments/assets/883cbc88-bd28-4769-a7b6-a90f3553cf02)
-          ![image](https://github.com/user-attachments/assets/5e317c6c-4098-426c-b3bf-3536cddff8b7)
-          ![image](https://github.com/user-attachments/assets/31ac175a-8dfd-4491-a92f-299a825edba3)
-
+    - [x] ![image](https://github.com/user-attachments/assets/1d6add0d-e499-4cc9-a4eb-abaead3967cf)
+          ![image](https://github.com/user-attachments/assets/d34b890a-bbb8-4b36-b9a7-6d8cda5b91d5)
+          ![image](https://github.com/user-attachments/assets/aa963cfb-371b-451b-83e6-59058cec96bd)
 
 ### Section 3.3.4
 - [x] Write (in English or Persian) about each file in /proc/ directory:
@@ -77,13 +75,12 @@ Student Name of member 2: Iman Mohammadi
     12. `همانند cmdline در بخش قبل، اینجا پارامترهایی که موقع اجرای کرنل به آن پاس داده شده‌اند نمایش داده می‌شود. `
 
 - [x] Place your source code for a program that shows details of processor:
-    - [x]  ![image](https://github.com/user-attachments/assets/288e79df-4e17-4956-b732-44cfe240996f)
-           ![image](https://github.com/user-attachments/assets/961da957-cb9c-4e02-9950-a1658295f67b)
-
+    - [x]  ![image](https://github.com/user-attachments/assets/0c9852cf-4361-4b9b-97c0-c09772432a6f)
+           ![image](https://github.com/user-attachments/assets/a1171f60-3d64-4bd3-945f-c5bba88765d0)
 
 - [x] Place your source code for a program that shows details of memory management sub-system:
-    - [x]   ![Screenshot (2698)](https://github.com/user-attachments/assets/1f9145e1-5e49-45d9-8b73-e8efdb97dd77)
-            ![Screenshot (2699)](https://github.com/user-attachments/assets/f89f78bb-6d97-401f-aa62-7d1b0a169142)
+    - [x]   ![Screenshot (2698)](https://github.com/user-attachments/assets/ff8c858b-1cb7-41b2-a71a-d078a567cb45)
+            ![Screenshot (2699)](https://github.com/user-attachments/assets/7e7507dd-3478-4825-8d47-3325e5701592)
 
 - [x] Write your description about five important files at /proc/sys/kernel:
 
