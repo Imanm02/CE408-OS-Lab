@@ -7,6 +7,7 @@ Student Name of member 2: Iman Mohammadi
 ### Section 3.3.1
 - [x] Investigate the /proc/ directory
     1. [x] ![image](https://github.com/user-attachments/assets/f7756619-807c-4ef3-a7c3-fafb980c8c81)
+<img width="1920" height="1200" alt="381901975-f7756619-807c-4ef3-a7c3-fafb980c8c81" src="https://github.com/user-attachments/assets/83cc7c31-ab53-4314-9c24-1c24864015e0" />
 
 ### Section 3.3.2
 
