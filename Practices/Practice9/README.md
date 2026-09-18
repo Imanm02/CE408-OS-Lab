@@ -1,3 +1,13 @@
+# Practice 9: Interrupts
+
+Session 9. Official instructions: [session9.md](https://github.com/Sharif-OS-Lab/session-9/blob/main/session9.md)
+
+Two experiments. The first (9.3) is a user-space program that lists every interrupt in the system by reading `/proc/interrupts`. The second (9.4) adds a software-triggered interrupt: a kernel module registers a handler on a free IRQ line and exposes `/proc/my_softirq`, and a small user program writes to that file to fire it.
+
+Sources in this folder: `display_interrupts.c` for 9.3, and `my_softirq_module.c`, `trigger_interrupt.c` and the `Makefile` for 9.4. The build output is not committed. This was done on kernel 6.8.0-48-generic with GCC 13.3.0, and the module takes over a real IRQ line, so load it only in a virtual machine you can throw away.
+
+---
+
 Student Name of member 1: `Iman Mohammadi`
 
 Student Name of member 2: `Negar Babashah`
@@ -70,16 +80,13 @@ int main() {
 
 ## Section 9.4
 - [x] Adding a new interrupt  
-    - [x] `FILL HERE with your descriptions (write in English or Persian)`
-    - [x] `FILL HERE with screenshot of execution`   
-    - [x] `FILL HERE with requirements`
-# ۱. توضیحات
+### ۱. توضیحات
 
 <div dir="rtl">
 
 هدف از این پروژه، ایجاد یک وقفه نرم‌افزاری است که با نوشتن به فایل `/proc/my_softirq` توسط برنامه کاربر، فعال می‌شود و هندلر مرتبط با آن در ماژول کرنل اجرا می‌گردد. این فرآیند شامل مراحل زیر است:
 
-## ایجاد ماژول کرنل:
+#### ایجاد ماژول کرنل:
 
 - تعریف یک IRQ آزاد، در اینجا IRQ شماره 16 که توسط ماژول کرنل استفاده می‌شود. این مورد را با توجه به سیستم شخصی خود باید تنظیم کنیم.
 - ثبت هندلر IRQ با استفاده از `request_irq`.
@@ -151,7 +158,7 @@ MODULE_AUTHOR("Iman Mohammadi & Negar Babashah");
 MODULE_DESCRIPTION("A module for adding a software interrupt to Linux using /proc");
 ```
 
-## ایجاد برنامه کاربر:
+#### ایجاد برنامه کاربر:
 
 - نوشتن برنامه‌ای که با اجرای آن، به فایل `/proc/my_softirq` نوشته و IRQ را تحریک می‌کند.
 
@@ -187,7 +194,7 @@ int main() {
 }
 ```
 
-## کامپایل و بارگذاری ماژول کرنل:
+#### کامپایل و بارگذاری ماژول کرنل:
 
 - کامپایل ماژول با استفاده از `make`.
 
@@ -204,42 +211,44 @@ clean:
 
 - بارگذاری ماژول با دستور `insmod` و بررسی موفقیت‌آمیز بودن بارگذاری از طریق لاگ کرنل (`dmesg`).
 
-## تحریک IRQ و بررسی عملکرد:
+#### تحریک IRQ و بررسی عملکرد:
 
 - اجرای برنامه کاربر برای تحریک IRQ.
 - بررسی لاگ کرنل برای اطمینان از اجرای هندلر IRQ.
 
-## آزادسازی ماژول کرنل پس از آزمایش:
+#### آزادسازی ماژول کرنل پس از آزمایش:
 
 - آزادسازی ماژول با دستور `rmmod`.
 - پاکسازی فایل‌های کامپایل شده و فایل‌های اجرایی.
 
-### توضیح فنی:
-سیگنال‌های IRQ (Interrupt Request)، سیگنال‌هایی هستند که توسط سخت‌افزار یا نرم‌افزار به پردازنده ارسال می‌شوند تا توجه سیستم عامل را به یک رویداد خاص جلب کنند. در این پروژه، از یک IRQ آزاد، مثلاً IRQ 16 برای ایجاد یک وقفه نرم‌افزاری استفاده شده است. با نوشتن به فایل `/proc/my_softirq`، تابع `generic_handle_irq` فراخوانی شده و IRQ تحریک می‌شود. هندلر IRQ ثبت شده در ماژول کرنل، پیام‌های مشخصی را در لاگ کرنل ثبت می‌کند تا تأیید کند که IRQ به درستی تحریک و هندلر اجرا شده است.
+#### توضیح فنی:
+سیگنال‌های IRQ (Interrupt Request)، سیگنال‌هایی هستند که توسط سخت‌افزار یا نرم‌افزار به پردازنده ارسال می‌شوند تا توجه سیستم عامل را به یک رویداد خاص جلب کنند. در این پروژه، از یک IRQ آزاد، مثلاً IRQ 16 برای ایجاد یک وقفه نرم‌افزاری استفاده شده است. با نوشتن به فایل `/proc/my_softirq`، تابع `proc_write` اجرا می‌شود، پیام «Interrupt triggered by user space.» در لاگ کرنل ثبت می‌گردد و بعد `generic_handle_irq` صدا زده می‌شود.
+
+نکته‌ای که موقع مرتب کردن این گزارش و با نگاه دوباره به همین خروجی‌ها متوجه شدم: `generic_handle_irq` را از context پردازه صدا زده‌ام، یعنی از داخل `write` روی فایل proc، و کرنل ۶.۸ این کار را قبول نمی‌کند. به همین دلیل در خروجی `dmesg` بالا یک trace هشدار دیده می‌شود و پیام «My Software Interrupt Handler Invoked!» هیچ‌وقت چاپ نشده است. پس در عمل ثبت و آزادسازی IRQ و مسیر سمت کاربر کار کرده‌اند ولی خود هندلر اجرا نشده است. کد را همان طور که تحویل داده‌ام نگه داشته‌ام.
 
 </div>
 
-# ۲. Screenshot of Execution
+### ۲. Screenshot of Execution
 
 <div dir="rtl">
 
-### کامپایل ماژول کرنل:
+#### کامپایل ماژول کرنل:
 
 - نمایش خروجی دستور `make` که نشان‌دهنده موفقیت‌آمیز بودن فرآیند کامپایل است.
 
-### بارگذاری ماژول کرنل:
+#### بارگذاری ماژول کرنل:
 
 - نمایش خروجی دستور `insmod my_softirq_module.ko` و پیام‌های مربوطه در لاگ کرنل (`dmesg`).
 
-### تحریک IRQ از طریق برنامه کاربر:
+#### تحریک IRQ از طریق برنامه کاربر:
 
 - نمایش اجرای برنامه `trigger_interrupt` و خروجی آن.
 
-### بررسی لاگ کرنل:
+#### بررسی لاگ کرنل:
 
-- نمایش خروجی دستور `dmesg | tail` پس از تحریک IRQ که نشان‌دهنده اجرای هندلر IRQ است.
+- نمایش خروجی دستور `dmesg | tail` پس از تحریک IRQ.
 
-### آزادسازی ماژول کرنل:
+#### آزادسازی ماژول کرنل:
 
 - نمایش اجرای دستور `rmmod my_softirq_module` و پیام‌های مربوطه در لاگ کرنل.
 
@@ -255,17 +264,17 @@ clean:
 
 </div>
 
-# ۳. نیازمندی‌ها
+### ۳. نیازمندی‌ها
 
 <div dir="rtl">
 
 برای اجرای این پروژه، نیاز به موارد زیر داریم:
 
-## سیستم عامل:
+#### سیستم عامل:
 
 - لینوکس، توزیع‌های مبتنی بر دبیان مانند Ubuntu
 
-## هسته لینوکس (Kernel):
+#### هسته لینوکس (Kernel):
 
 - نسخه `6.8.0-48-generic` یا مشابه آن.
 - هدرهای کرنل مرتبط نصب شده‌اند:
@@ -274,11 +283,11 @@ clean:
     sudo apt-get install linux-headers-$(uname -r)
     ```
 
-## کامپایلر:
+#### کامپایلر:
 
 - GCC نسخه `13.3.0` (تفاوت نسخه با نسخه هسته معمولاً مشکلی ایجاد نمی‌کند).
 
-## ابزارهای کامپایل:
+#### ابزارهای کامپایل:
 
 - `build-essential` نصب شده‌اند:
 
@@ -286,11 +295,11 @@ clean:
     sudo apt-get install build-essential
     ```
 
-## دسترسی ریشه (Root):
+#### دسترسی ریشه (Root):
 
 - برای بارگذاری و آزادسازی ماژول‌های کرنل نیاز به دسترسی ریشه دارید که چالش خاصی نیست اگر مثلا روی سرور یا سیستم خودتون در حال ران گرفتن از برنامه هستید.
 
-## فایل‌های سورس:
+#### فایل‌های سورس:
 
 - `my_softirq_module.c`: سورس کد ماژول کرنل.
 - `Makefile`: فایل Makefile برای کامپایل ماژول.
