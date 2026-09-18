@@ -1,6 +1,6 @@
 # Practice 4: Creating and running processes
 
-Session 4. Official instructions: [session4.md](https://github.com/Sharif-OS-Lab/session-3-4/blob/main/session4.md)
+Session 4. Official instructions: [session4.md](https://github.com/Sharif-OS-Lab/session-3-4/blob/master/session4.md)
 
 The session covered how processes are created and run: looking at running processes and their PIDs with `ps`, `getpid` and `getppid`, creating children with `fork` and seeing that parent and child have separate memory, waiting for a child with `wait`, watching an orphan get adopted, and finally replacing a process image with the `exec` family.
 

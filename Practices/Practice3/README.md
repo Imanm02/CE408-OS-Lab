@@ -1,6 +1,6 @@
 # Practice 3: Watching the kernel through /proc
 
-Session 3. Official instructions: [session3.md](https://github.com/Sharif-OS-Lab/session-3-4/blob/main/session3.md)
+Session 3. Official instructions: [session3.md](https://github.com/Sharif-OS-Lab/session-3-4/blob/master/session3.md)
 
 The session was about reading kernel and process state out of the `/proc` pseudo-filesystem: browsing it, reading the per-process files under `/proc/<PID>`, and then writing small programs that pull specific information out of it.
 
