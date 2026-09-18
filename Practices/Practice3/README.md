@@ -1,6 +1,16 @@
-Student Name of member 1: Negar Babashah
+# Practice 3: Watching the kernel through /proc
 
-Student Name of member 2: Iman Mohammadi
+Session 3. Official instructions: [session3.md](https://github.com/Sharif-OS-Lab/session-3-4/blob/main/session3.md)
+
+The session was about reading kernel and process state out of the `/proc` pseudo-filesystem: browsing it, reading the per-process files under `/proc/<PID>`, and then writing small programs that pull specific information out of it.
+
+Sources in this folder: `pids.sh` lists every PID with its name, `details.c` prints the name, memory use, command line and environment of a PID given as an argument, `cpu.c` reads `/proc/cpuinfo`, `mem.c` reads `/proc/meminfo`, and `version.c` copies `/proc/version` into a text file.
+
+---
+
+Student Name of member 1: `Negar Babashah`
+
+Student Name of member 2: `Iman Mohammadi`
 
 - [x] Read Session Contents.
 
@@ -22,13 +32,13 @@ Student Name of member 2: Iman Mohammadi
 
 - [x] Write (in English or Persian) about each file in /proc/(PID) directory:
     
-    1. این فایل حاوی آرگومان‌های command line ای است که برای فراخواندن پردازه استفاده شده‌اند. در مثالی که من بررسی کردم، عبارت /init نوشته شده بود.
+    1. فایل `cmdline` حاوی آرگومان‌های command line ای است که برای فراخواندن پردازه استفاده شده‌اند. در مثالی که من بررسی کردم، عبارت /init نوشته شده بود.
     
     2. محتوای environ نشان‌دهنده‌ی محیط یا environmentای است که موقعی که پراسس با execv می‌خواست اجرا شود وجود داشت. در مثالی که من بررسی کردم عبارت WSL2_CROSS_DISTRO=/wslNIceCn نوشته شده بود چون روی wsl در حال اجرا است. 
     
-    3. `فایل stat حاوی اطلاعاتی درباره‌ی status پردازه است. هر یک از خروجی‌های آن به ترتیب یک معنی دارند. اولی شماره‌ی پردازه یا pid است، سپس comm (اسم فایل executable)، state (وضعیت پردازه. مثلا Running یا Sleeping)، ppid (آیدی parent) و غیره است.
-    محتوای stat در مثالی که من بررسی کردم به این صورت بود:`
-    ‍`   8 (init) S 1 8 8 0 -1 4211008 18 0 0 0 0 0 0 0 20 0 1 0 280 2215936 91 18446744073709551615 2468640 3466458 140726095690480 0 0 0 65536 2147024638 65536 0 0 0 17 0 0 0 0 0 0 3545504 3548384 30887936 140726095695823 140726095695829 140726095695829 140726095695858 0`
+    3. فایل `stat` حاوی اطلاعاتی درباره‌ی status پردازه است. هر یک از خروجی‌های آن به ترتیب یک معنی دارند. اولی شماره‌ی پردازه یا pid است، سپس comm (اسم فایل executable)، state (وضعیت پردازه. مثلا Running یا Sleeping)، ppid (آیدی parent) و غیره است. محتوای stat در مثالی که من بررسی کردم به این صورت بود:
+
+        `8 (init) S 1 8 8 0 -1 4211008 18 0 0 0 0 0 0 0 20 0 1 0 280 2215936 91 18446744073709551615 2468640 3466458 140726095690480 0 0 0 65536 2147024638 65536 0 0 0 17 0 0 0 0 0 0 3545504 3548384 30887936 140726095695823 140726095695829 140726095695829 140726095695858 0`
    
     4. فایل status اکثر اطلاعات موجود در فایل stat و statm را می‌دهد به صورتی که human readable باشد (یعنی نام فیلد را هم می‌نویسد). 
     
@@ -50,29 +60,23 @@ Student Name of member 2: Iman Mohammadi
 
 ### Section 3.3.4
 - [x] Write (in English or Persian) about each file in /proc/ directory:
-    1. `فایل meminfo شامل اطلاعاتی درباره‌ی حافظه، مانند حافظه‌ی کل، حافظه‌ی آزاد (free)، کش‌ها و ... است. `
-    
-    2. `مانند آنچه در بخش اولیه گذاشته شد، فایل version حاوی اطلاعاتی درباره‌ی نسخه‌ی کرنل، ورژن gccای که برای build کردن کرنل استفاده شده است و زمان build است.`
-    
-    3. `مدت زمانی که سیستم بالا بوده است و همچنین load average در فایل uptime آورده شده است. `
-    
-    4. `در فایل stat آماری مربوط به cpu آورده شده است. بیان شده است که چقدر زمان مثلا در usermode بوده است، چقدر idle بوده است، چند پردازه در حال اجرا هستند و ... `
-    
-    5. `فایل mounts در گذشته شامل لیست همه‌ی فایل سیستم‌هایی بود که روی سیستم mount شده‌اند. پس از یک نسخه‌ای به بعد، این فایل لینکی به proc/self/mount شد که mount pointهای namespace پردازه را نشان می‌دهد.`
-    
-    6. `دایرکتوری net شامل فایل‌هایی با اطلاعات درباره‌ی network و آمارهای مربوط به آن است. مثلا دیوایس‌های شبکه، configurationها، و پروتکل‌های شبکه در کرنل.`
-    
-    7. `فایل loadavg نشان می‌دهد سیستم چقدر شلوغ است. میانگین لود روی سیستم برای ۱ دقیقه، ۵ دقیقه، و ۱۵ دقیقه‌ی قبل را نشان می‌دهد. میزان cpu utilization را هم با استفاده از نسبت scheduling entities مصرفی به کل نشان می‌دهد. در آخرین فیلد هم pid پرداز‌ه‌ای که اخیرا اجرا شده است را نشان می‌دهد. `
-    
-    8. `فایل interrupts تعداد interruptهای هر cpu در هر io device از زمان boot تا الان را نشان می‌دهد. `
-    
-    9. `در فایل ioports لیست پورت‌های io که با دیوایس‌های سخت‌افزاری مختلف استفاده می‌شوند نشان داده شده است.`
-    
-    10. `فایل filesystems لیست filesystem هایی که کرنل ساپورت می کند را نشان می‌دهد. `
-    
-    11. `فایل cpuinfo اطلاعاتی درباره‌ی هریک از پردازنده‌ها دارد. شامل مدل، فرکانس، سایز کش، تعداد coreها، فلگ‌ها و ...`
-    
-    12. `همانند cmdline در بخش قبل، اینجا پارامترهایی که موقع اجرای کرنل به آن پاس داده شده‌اند نمایش داده می‌شود. `
+
+<div dir="rtl">
+
+1. فایل `meminfo` شامل اطلاعاتی درباره‌ی حافظه، مانند حافظه‌ی کل، حافظه‌ی آزاد (free)، کش‌ها و ... است.
+2. مانند آنچه در بخش اولیه گذاشته شد، فایل `version` حاوی اطلاعاتی درباره‌ی نسخه‌ی کرنل، ورژن gccای که برای build کردن کرنل استفاده شده است و زمان build است.
+3. در فایل `uptime` دو عدد آورده شده است: مدت زمانی که سیستم بالا بوده و مجموع زمان idle. خود load average اینجا نیست و در فایل `loadavg` است.
+4. در فایل `stat` آماری مربوط به cpu آورده شده است. بیان شده است که چقدر زمان مثلا در usermode بوده است، چقدر idle بوده است، چند پردازه در حال اجرا هستند و ...
+5. فایل `mounts` در گذشته شامل لیست همه‌ی فایل سیستم‌هایی بود که روی سیستم mount شده‌اند. پس از یک نسخه‌ای به بعد، این فایل لینکی به `/proc/self/mounts` شد که mount pointهای namespace پردازه را نشان می‌دهد.
+6. دایرکتوری `net` شامل فایل‌هایی با اطلاعات درباره‌ی network و آمارهای مربوط به آن است. مثلا دیوایس‌های شبکه، configurationها، و پروتکل‌های شبکه در کرنل.
+7. فایل `loadavg` نشان می‌دهد سیستم چقدر شلوغ است. میانگین لود روی سیستم برای ۱ دقیقه، ۵ دقیقه، و ۱۵ دقیقه‌ی قبل را نشان می‌دهد. میزان cpu utilization را هم با استفاده از نسبت scheduling entities مصرفی به کل نشان می‌دهد. در آخرین فیلد هم pid پرداز‌ه‌ای که اخیرا اجرا شده است را نشان می‌دهد.
+8. فایل `interrupts` تعداد interruptهای هر cpu در هر io device از زمان boot تا الان را نشان می‌دهد.
+9. در فایل `ioports` لیست پورت‌های io که با دیوایس‌های سخت‌افزاری مختلف استفاده می‌شوند نشان داده شده است.
+10. فایل `filesystems` لیست filesystem هایی که کرنل ساپورت می کند را نشان می‌دهد.
+11. فایل `cpuinfo` اطلاعاتی درباره‌ی هریک از پردازنده‌ها دارد. شامل مدل، فرکانس، سایز کش، تعداد coreها، فلگ‌ها و ...
+12. همانند `cmdline` در بخش قبل، اینجا پارامترهایی که موقع اجرای کرنل به آن پاس داده شده‌اند نمایش داده می‌شود.
+
+</div>
 
 - [x] Place your source code for a program that shows details of processor:
     - [x]  ![image](images/11.png)
@@ -85,18 +89,21 @@ Student Name of member 2: Iman Mohammadi
 - [x] Write your description about five important files at /proc/sys/kernel:
 
 <div dir="rtl">
-    - [x] `panic: مدت زمانی که سیستم پس از وقوع یک کرنل پنیک (kernel panic) قبل از rebootصبر می‌کند را تعیین می‌کند. مقدار دیفالت آن 0 است که یعنی به صورت خودکار reboot انجام نمی‌شود.`
-    - [x] `hostname: نام میزبان سیستم را ذخیره می‌کند. این نام برای شناسایی سیستم در شبکه استفاده می‌شود. `
-    - [x] `osrelease: نسخه‌ی سیستم‌عامل را نشان می‌دهد. شامل اطلاعاتی درباره‌ی نسخه‌ی کرنلی است که در حال اجراست.`
-    - [x]  `threads-max:  حداکثر تعداد تردهایی که سیستم می‌تواند ایجاد کند را مشخص می‌کند. `
-    - [x] `msgmax: حداکثر اندازه‌ی پیام‌های صف پیام (message queue) را تعیین می‌کند. واحد اندازه‌گیری آن هم بایت است `
+
+- [x] `panic`: مدت زمانی که سیستم پس از وقوع یک کرنل پنیک (kernel panic) قبل از reboot صبر می‌کند را تعیین می‌کند. مقدار دیفالت آن 0 است که یعنی به صورت خودکار reboot انجام نمی‌شود.
+- [x] `hostname`: نام میزبان سیستم را ذخیره می‌کند. این نام برای شناسایی سیستم در شبکه استفاده می‌شود.
+- [x] `osrelease`: نسخه‌ی سیستم‌عامل را نشان می‌دهد. شامل اطلاعاتی درباره‌ی نسخه‌ی کرنلی است که در حال اجراست.
+- [x] `threads-max`: حداکثر تعداد تردهایی که سیستم می‌تواند ایجاد کند را مشخص می‌کند.
+- [x] `msgmax`: حداکثر اندازه‌ی پیام‌های صف پیام (message queue) را تعیین می‌کند. واحد اندازه‌گیری آن هم بایت است.
+
 </div>
 
 - [x] Write your description about /proc/self file
-    - [x] `دایرکتوری /proc/self در لینوکس یک symbol link به دایرکتوری پردازه‌ای است که در حال حاضر به این دایرکتوری آمده است. در واقع اگر پردازه‌ی pid=x به این دایرکتوری برود، انگار به دایرکتوری proc/x رفته است. `
+    - [x] دایرکتوری `/proc/self` در لینوکس یک symbolic link به دایرکتوری پردازه‌ای است که در حال حاضر به این دایرکتوری آمده است. در واقع اگر پردازه‌ی pid=x به این دایرکتوری برود، انگار به دایرکتوری `/proc/x` رفته است.
 
 ## Source Code Submission
 
 please submit all your codes in a zip file
 
- - [x] [session3.zip](https://github.com/user-attachments/files/17602810/session3.zip)
+ - [x] The zip I attached to the original report is no longer reachable, but the same
+   sources are in this folder: `pids.sh`, `details.c`, `cpu.c`, `mem.c` and `version.c`.
