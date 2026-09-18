@@ -3,7 +3,7 @@
 #include <fcntl.h>
 
 int main(){
-	int file = open("oslab2.txt", O_WRONLY| O_CREAT | O_TRUNC);
+	int file = open("oslab2.txt", O_WRONLY| O_CREAT | O_TRUNC, 0644);
 	if (file < 0)
 		return -1;
 	long success = write(file, "Negar Babashah", 14);

@@ -1,3 +1,13 @@
+# Practice 2: System calls
+
+Session 2. Official instructions: [session2.md](https://github.com/Sharif-OS-Lab/session-1-2/blob/main/session2.md)
+
+This session was about system calls: locating the syscall number table in the kernel headers, invoking a call directly by its number with `syscall()`, doing the same through the ordinary libc wrapper, and finally adding a new system call to the kernel and rebuilding it.
+
+The four programs for section 2.3.4 are in this folder, one per task: `access_test.c` (`access`), `filework.c` (`open`, `write`, `close`), `memory.c` (`sysinfo`) and `cswitch.c` (`getrusage`).
+
+---
+
 Student Name of member 1: `Negar Babashah`
 
 Student Name of member 2: `Iman Mohammadi`
@@ -9,16 +19,17 @@ Student Name of member 2: `Iman Mohammadi`
 - [x] ![image](images/01.png)
 - [x] ![image](images/02.png)
 
-<div dir="rtl">
-
 ### Section 2.3.2
 - [x] ![Screenshot (2443)](images/03.png)
 - [x] ![Screenshot (2445)](images/04.png)
-- [x] همان طور که در برنامه آمده است، یک دایرکتوری به نام testdir با دسترسی‌های کامل ساخته می‌شود. از آنجا که این عمل موفقیت‌آمیز بوده است، خروجی سیسکال صفر است.
-- [x] ثابت NR_mkdir__ در واقع شماره‌ی syscall مربوط به mkdir است.
-- [x] به کمک این دستور می‌توان یک syscall موجود در سیستم را با داشتن شماره‌ی ثابت آن و ورودی دادن سایر ورودی‌های مربوط به این فراخوانی، صدا کرد. خروجی آن در صورت موفقیت ۰ بوده و در صورت بروز خطا، -۱ است. اگر خطا رخ دهد erorrno هم ست می‌شود.
 
-<\div>
+<div dir="rtl">
+
+- [x] همان طور که در برنامه آمده است، یک دایرکتوری به نام testdir با دسترسی‌های کامل ساخته می‌شود. از آنجا که این عمل موفقیت‌آمیز بوده است، خروجی سیسکال صفر است.
+- [x] ثابت <span dir="ltr">`__NR_mkdir`</span> در واقع شماره‌ی syscall مربوط به mkdir است.
+- [x] به کمک این دستور می‌توان یک syscall موجود در سیستم را با داشتن شماره‌ی ثابت آن و ورودی دادن سایر ورودی‌های مربوط به این فراخوانی، صدا کرد. مقدار برگشتی آن همان چیزی است که خود آن فراخوانی برمی‌گرداند؛ برای <span dir="ltr">`mkdir`</span> در صورت موفقیت ۰ و در صورت بروز خطا <span dir="ltr">`-1`</span> است. اگر خطا رخ دهد <span dir="ltr">`errno`</span> هم ست می‌شود.
+
+</div>
 
 ### Section 2.3.3
 - [x] ![image](images/05.png)
@@ -38,7 +49,7 @@ Student Name of member 2: `Iman Mohammadi`
 
 - [x] Do 13 subtasks from 1 to 13 and add screenshots of each:
 
- 1. [x]
+    1. [x]
     
     ![image](images/15.png)
     
@@ -58,11 +69,11 @@ Student Name of member 2: `Iman Mohammadi`
     
     ![image](images/19.png)
 
-    [x]
+    - [x]
 
     ![image](images/20.png)
 
-     [x]
+    - [x]
 
     ![image](images/21.png)
     
@@ -70,11 +81,11 @@ Student Name of member 2: `Iman Mohammadi`
     
     ![image](images/22.png)
 
-    [x]
+    - [x]
 
     ![image](images/23.png)
 
-    [x]
+    - [x]
 
     ![image](images/24.png)
 
@@ -93,10 +104,10 @@ Student Name of member 2: `Iman Mohammadi`
     14. [x] ![image](images/30.png)
 
     15. [x] ![image](images/31.png)
-        [x] ![image](images/32.png)
-        [x] ![image](images/33.png)
-        [x] ![image](images/34.png)
-        [x] ![image](images/35.png)
+        - [x] ![image](images/32.png)
+        - [x] ![image](images/33.png)
+        - [x] ![image](images/34.png)
+        - [x] ![image](images/35.png)
 
 - [x] ![image](images/36.png)
 - [x] ![image](images/37.png)
