@@ -4,7 +4,7 @@ Session 3. Official instructions: [session3.md](https://github.com/Sharif-OS-Lab
 
 The session was about reading kernel and process state out of the `/proc` pseudo-filesystem: browsing it, reading the per-process files under `/proc/<PID>`, and then writing small programs that pull specific information out of it.
 
-Sources in this folder: `pids.sh` lists every PID with its name, `details.c` prints the name, memory use, command line and environment of a PID given as an argument, `cpu.c` reads `/proc/cpuinfo`, `mem.c` reads `/proc/meminfo`, and `version.c` copies `/proc/version` into a text file.
+Sources in this folder: `pids.sh` lists every PID with its name, `details.c` takes a PID as an argument and prints its name and memory size out of `/proc/<PID>/status`, then reads `cmdline` and `environ`, `cpu.c` reads `/proc/cpuinfo`, `mem.c` reads `/proc/meminfo`, and `version.c` copies `/proc/version` into a text file.
 
 ---
 
@@ -54,6 +54,8 @@ Student Name of member 2: `Iman Mohammadi`
     - [x] ![image](images/07.png)
 
 - [x] Place your source code for a program that shows details of a program by receiving PID:
+
+  نکته: در `details.c` حلقه‌ای که قرار بود بایت‌های `\0` را به خط جدید تبدیل کند هیچ‌وقت اجرا نمی‌شود، چون شرط خود حلقه دقیقا روی همان بایت تمام می‌شود. از آنجا که `cmdline` و `environ` با همین بایت از هم جدا می‌شوند، `printf` فقط تا اولین جداکننده چاپ می‌کند؛ یعنی از خط فرمان فقط `argv[0]` و از محیط فقط اولین متغیر را می‌بینیم. حجم حافظه را هم مستقیم از `VmSize` برداشته‌ام که واحدش کیلوبایت است، در حالی که صورت آزمایش بایت خواسته بود. کد را همان طور که تحویل داده‌ام نگه داشته‌ام.
     - [x] ![image](images/08.png)
           ![image](images/09.png)
           ![image](images/10.png)
