@@ -34,7 +34,7 @@ Student Name of member 2: `Iman Mohammadi`
   MODULE_LICENSE("GPL");
   ```
 
-  نکته: در این کد فقط `module_init` را نوشته‌ام و `module_exit` ندارد، پس بعد از `insmod` نمی‌شود ماژول را با `rmmod` برداشت. کد را همان طور که تحویل داده‌ام نگه داشته‌ام.
+  نکته: در این کد فقط `module_init` را نوشته‌ایم و `module_exit` ندارد، پس بعد از `insmod` نمی‌شود ماژول را با `rmmod` برداشت. کد را همان طور که تحویل دادیم نگه داشته‌ایم.
 
 
     - [x]  تصاویر اجرا:
@@ -114,7 +114,7 @@ Student Name of member 2: `Iman Mohammadi`
   MODULE_LICENSE("GPL");
   ```
 
-  نکته: `log_packet` برای هر پکت فایل را با `filp_open` باز می‌کند و می‌نویسد، ولی `packet_handler` روی هوک `NF_INET_PRE_ROUTING` اجرا می‌شود که context آن اجازه‌ی خوابیدن ندارد. روی کرنلی که `CONFIG_DEBUG_ATOMIC_SLEEP` روشن باشد این کار هشدار می‌دهد. کد را همان طور که تحویل داده‌ام نگه داشته‌ام.
+  نکته: `log_packet` برای هر پکت فایل را با `filp_open` باز می‌کند و می‌نویسد، ولی `packet_handler` روی هوک `NF_INET_PRE_ROUTING` اجرا می‌شود که context آن اجازه‌ی خوابیدن ندارد. روی کرنلی که `CONFIG_DEBUG_ATOMIC_SLEEP` روشن باشد این کار هشدار می‌دهد. کد را همان طور که تحویل دادیم نگه داشته‌ایم.
 
   - [x] اجرای کد و مراحل اضافه کردن ماژول به کرنل (مشابه بخش ۱ است):
       

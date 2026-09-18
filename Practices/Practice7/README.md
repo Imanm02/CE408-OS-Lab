@@ -24,8 +24,9 @@ Student Name of member 2: `Iman Mohammadi`
 - [x]  Checking the process ids
     - [x] <img width="949" alt="{76432CCB-4E43-4ABD-BFE2-7677D2353AF1}" src="images/02.png" />
 
-    - [ ] This screenshot never finished uploading in the original report, so it is lost.
-      The code it showed is `thread2.c` in this folder.
+    - [ ] This screenshot, the program's output, never finished uploading in the original
+      report, so it is lost. The code it ran is `thread2.c` in this folder, and the
+      screenshot above shows that source.
 
     - [x] همان طور که مشاهده می‌شود pidها یکسان هستند. دلیلش هم این است که دو ترد ایجاد شده هر دو متعلق به یک پراسس هستند.
 
