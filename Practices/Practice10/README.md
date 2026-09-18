@@ -1,19 +1,25 @@
-Team Name: `99109325_99102207`
+# Practice 10: Device drivers
+
+Session 10. Official instructions: [session-10.md](https://github.com/Sharif-OS-Lab/session-10/blob/main/session-10.md)
+
+Two experiments. The first (10.3) is a hello-world driver: a kernel module that prints a message to the kernel log when it is loaded. The second (10.4) is a network sniffing driver, which I did two ways, as a kernel module registering a netfilter hook that logs the source and destination of every packet, and from user space with a veth pair, `tcpdump` and Wireshark.
+
+Both modules are listed in full in the report below rather than kept as separate files here. They sit in the packet path, so load them only in a virtual machine you can throw away.
+
+---
 
 Student Name of member 1: `Negar Babashah`
-Student No. of member 1: `99109325`
 
 Student Name of member 2: `Iman Mohammadi`
-Student No. of member 2: `99102207`
 
-- [ ] Read Session Contents.
+- [x] Read Session Contents.
 
 ## Section 10.3
-- [ ] "Hello World" linux driver
+- [x] "Hello World" linux driver
   
-  - [ ] ابتدا فایل hello.c را می‌سازیم که قرار است در هسته اجرا شود. از هدر module.h هم استفاده می‌کنیم. 
+  - [x] ابتدا فایل hello.c را می‌سازیم که قرار است در هسته اجرا شود. از هدر module.h هم استفاده می‌کنیم. 
       یک فایل Makefile هم می‌سازیم که در تصاویر محتوای آن مشخص است. پس از آن دستور make را می‌زنیم تا ماژول‌ها ساخته شوند. سپس، با استفاده از دستور insmod hello.ko، برنامه را به فضای کرنل اضافه می‌کنیم. به این صورت ماژول hello به لیست ماژول‌های فعال کرنل اضافه می‌شود.
-  - [ ] کد فایل hello.c به شرح زیر است:
+  - [x] کد فایل hello.c به شرح زیر است:
   ```c
   #include <linux/module.h>
   #include <linux/kernel.h>
@@ -28,8 +34,10 @@ Student No. of member 2: `99102207`
   MODULE_LICENSE("GPL");
   ```
 
+  نکته: در این کد فقط `module_init` را نوشته‌ام و `module_exit` ندارد، پس بعد از `insmod` نمی‌شود ماژول را با `rmmod` برداشت. کد را همان طور که تحویل داده‌ام نگه داشته‌ام.
 
-    - [ ]  تصاویر اجرا:
+
+    - [x]  تصاویر اجرا:
  ![image](images/01.png)
 ![image](images/02.png)
 
@@ -37,12 +45,12 @@ Student No. of member 2: `99102207`
     
 
 ## Section 10.4
-- [ ] Network Sniffing Driver 
+- [x] Network Sniffing Driver 
 
-  - [ ]  گوش دادن به اطلاعات شبکه را به دو صورت انجام می‌دهیم.
+  - [x]  گوش دادن به اطلاعات شبکه را به دو صورت انجام می‌دهیم.
      روش اول از netfilter استفاده می‌کند که در دستور کار هم آمده است و یک ماژولی اضافه می‌کنیم که در سطح کرنل اجرا می‌شود. در روش دوم که در سطح کاربر اجرا می‌شود از وایرشارک و یک سری پکت دیگر برای خواندن و ذخیره‌ی ارتباطات شبکه استفاده می‌کنیم. 
 
-  - [ ]  کد این بخش به این صورت است که ساختار آن خیلی مشابه با قسمت ۱ است.
+  - [x]  کد این بخش به این صورت است که ساختار آن خیلی مشابه با قسمت ۱ است.
   
   ```c
 
@@ -106,7 +114,9 @@ Student No. of member 2: `99102207`
   MODULE_LICENSE("GPL");
   ```
 
-  - [ ] اجرای کد و مراحل اضافه کردن ماژول به کرنل (مشابه بخش ۱ است):
+  نکته: `log_packet` برای هر پکت فایل را با `filp_open` باز می‌کند و می‌نویسد، ولی `packet_handler` روی هوک `NF_INET_PRE_ROUTING` اجرا می‌شود که context آن اجازه‌ی خوابیدن ندارد. روی کرنلی که `CONFIG_DEBUG_ATOMIC_SLEEP` روشن باشد این کار هشدار می‌دهد. کد را همان طور که تحویل داده‌ام نگه داشته‌ام.
+
+  - [x] اجرای کد و مراحل اضافه کردن ماژول به کرنل (مشابه بخش ۱ است):
       
 ![image](images/03.png)
 
@@ -133,9 +143,9 @@ Student No. of member 2: `99102207`
 ![image](images/10.png)
 
 
-  - [ ]  کدی در این قسمت نوشته نشده است ولی دستورات اجرا شده به ترتیب زیر هستند:
+  - [x]  کدی در این قسمت نوشته نشده است ولی دستورات اجرا شده به ترتیب زیر هستند:
  
-```
+  ```bash
     sudo apt-get install tcpreplay tcpdump
     
     sudo ip link add veth0 type veth peer name veth1
@@ -150,5 +160,5 @@ Student No. of member 2: `99102207`
     sudo tcpdump -i veth0 -w traffic.pcap
     sudo tcpreplay -i veth1 traffic.pcap
     wireshark traffic.pcap
- ```
+  ```
 
