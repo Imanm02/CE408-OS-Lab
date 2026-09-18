@@ -1,0 +1,14 @@
+# Kernel module build output
+*.o
+*.ko
+*.mod
+*.mod.c
+*.mod.o
+*.symvers
+*.order
+.*.cmd
+.tmp_versions/
+
+# Compiled programs from the practices
+Practices/Practice9/display_interrupts
+Practices/Practice9/trigger_interrupt
