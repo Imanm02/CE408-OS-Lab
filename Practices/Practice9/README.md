@@ -50,8 +50,8 @@ int main() {
 
 <div align="center">
 
-![image](https://github.com/user-attachments/assets/2349c0e6-6a43-4c01-83ef-c9d7d9c411de)
-![image](https://github.com/user-attachments/assets/cd394031-2e47-4762-b1c6-106f8dd05b20)
+![image](images/01.png)
+![image](images/02.png)
 
 </div>
 
@@ -246,10 +246,10 @@ clean:
 
 <div align="center">
 
-![image](https://github.com/user-attachments/assets/b0ede199-0120-4a23-86a1-b17a6504ec15)
-![image](https://github.com/user-attachments/assets/ff296235-7f09-44a7-9ad5-ab7c7fac238c)
-![image](https://github.com/user-attachments/assets/8ad58f84-dbe4-4ae1-a9fe-42f0948885a0)
-![image](https://github.com/user-attachments/assets/f202bb8d-99b1-42d8-a29a-ae4e85d06765)
+![image](images/03.png)
+![image](images/04.png)
+![image](images/05.png)
+![image](images/06.png)
 
 </div>
 

@@ -8,38 +8,38 @@ Student Name of member 2: `Negar Babashah`
 - [x] Choose one of Virtual Machine Softwares, such as VirtualBox, VMware, ...
     1. [x] `VMware`
 - [x] Install Debian on Virtual Machine, add three screenshots from install process
-    1. [x] ![pic1](https://github.com/user-attachments/assets/e716e73e-ec86-4f1b-bd0d-8fcb99497c2d)
-    2. [x] ![pic2](https://github.com/user-attachments/assets/3db195c0-b12f-4507-93d6-adf5cd678300)
+    1. [x] ![pic1](images/01.jpg)
+    2. [x] ![pic2](images/02.jpg)
 
 ### Section 1.3.2
 
 - [x] Do 13 subtasks from 1 to 13 and add screenshots of each:
-    1. [x] ![pic3](https://github.com/user-attachments/assets/f79873d5-fcb8-4d93-971b-cfbb4d15db29)
-    1. [x] ![pic4](https://github.com/user-attachments/assets/13f13011-67e9-46dc-bb70-b83851d1cd8d)
-    1. [x] ![pic5](https://github.com/user-attachments/assets/dd844220-dff1-4107-b0b0-a3c94286f5e3)
-    1. [x] ![pic6](https://github.com/user-attachments/assets/293e8531-7ffa-4720-a5d0-29e0228031ad)
-    1. [x] ![pic7](https://github.com/user-attachments/assets/d8d59dc2-4bcd-4f28-8a0d-47bde4193c6c)
-    1. [x] ![pic8](https://github.com/user-attachments/assets/551f202b-e030-4717-8c3f-9b2dabbd9d14)
-    1. [x] ![pic9](https://github.com/user-attachments/assets/821e019d-8c66-4949-b5c8-da99b473eb41)
-    1. [x] ![pic10](https://github.com/user-attachments/assets/a11c31f7-7fdb-48a2-a6f7-f2e4d9f0806d)
-    1. [x] ![pic11](https://github.com/user-attachments/assets/50b684d7-4115-4384-8bdb-6b7306a628f2)
-    1. [x] ![pic12](https://github.com/user-attachments/assets/701f8957-33dd-4d06-8bac-705125d71b53)
-    1. [x] ![pic13](https://github.com/user-attachments/assets/17b336ce-9174-4944-a327-9d338115e482)
-    1. [x] ![pic14](https://github.com/user-attachments/assets/ab764581-a143-4580-9b8f-50c34dc154c5)
-    1. [x] ![pic15](https://github.com/user-attachments/assets/1fd83bfa-6bd6-459e-851a-99c7ce16a0a5)
-    1. [x] ![pic16](https://github.com/user-attachments/assets/56260509-1d73-44e0-bbb7-73bf3345ace2)
-    1. [x] ![pic17](https://github.com/user-attachments/assets/ad3f4c2c-a584-40f5-a010-1ecdb6f349dc)
-    1. [x] ![pic18](https://github.com/user-attachments/assets/21634b58-c243-4ce1-9838-c1cc4500c501)
-    1. [x] ![pic19](https://github.com/user-attachments/assets/843fad01-ccdb-4745-90c0-366cbd90c2f2)
-    1. [x] ![pic20](https://github.com/user-attachments/assets/2caf8245-9c15-4396-86ec-0d03a3e14023)
-    1. [x] ![pic21](https://github.com/user-attachments/assets/112e80da-cdf3-4c49-8302-6f7284bb8bda)
-    1. [x] ![pic22](https://github.com/user-attachments/assets/9c60fd4f-6a8c-49a1-a717-e428831f4dd5)
-    1. [x] ![pic23](https://github.com/user-attachments/assets/2069a6f3-762e-496f-add8-c73600fc81b2)
-    1. [x] ![pic24](https://github.com/user-attachments/assets/2a048ee9-a203-4302-8d41-5fedb9440da1)
-    1. [x] ![pic25](https://github.com/user-attachments/assets/cf7d61c6-7e19-4250-ab50-8c7445bb1b10)
-    1. [x] ![pic26](https://github.com/user-attachments/assets/607e7321-c7b4-4658-ba9f-cbc41760fd68)
-    1. [x] ![pic27](https://github.com/user-attachments/assets/04e60f62-0e7c-4e25-9047-ae1c84220c33)
-    1. [x] ![pic28](https://github.com/user-attachments/assets/01f17dea-70bd-480c-b319-62586cf45205)
+    1. [x] ![pic3](images/03.jpg)
+    1. [x] ![pic4](images/04.jpg)
+    1. [x] ![pic5](images/05.jpg)
+    1. [x] ![pic6](images/06.jpg)
+    1. [x] ![pic7](images/07.jpg)
+    1. [x] ![pic8](images/08.jpg)
+    1. [x] ![pic9](images/09.jpg)
+    1. [x] ![pic10](images/10.jpg)
+    1. [x] ![pic11](images/11.jpg)
+    1. [x] ![pic12](images/12.jpg)
+    1. [x] ![pic13](images/13.jpg)
+    1. [x] ![pic14](images/14.jpg)
+    1. [x] ![pic15](images/15.jpg)
+    1. [x] ![pic16](images/16.jpg)
+    1. [x] ![pic17](images/17.jpg)
+    1. [x] ![pic18](images/18.jpg)
+    1. [x] ![pic19](images/19.jpg)
+    1. [x] ![pic20](images/20.jpg)
+    1. [x] ![pic21](images/21.jpg)
+    1. [x] ![pic22](images/22.jpg)
+    1. [x] ![pic23](images/23.jpg)
+    1. [x] ![pic24](images/24.jpg)
+    1. [x] ![pic25](images/25.jpg)
+    1. [x] ![pic26](images/26.jpg)
+    1. [x] ![pic27](images/27.jpg)
+    1. [x] ![pic28](images/28.jpg)
 
 - For subtask 7 write difference between `>` and `>>`
     - [x]
@@ -105,28 +105,28 @@ Student Name of member 2: `Negar Babashah`
 ### Section 1.4.1
 
 - [x] Get kernel with apt-get
-    - [x] ![pic29](https://github.com/user-attachments/assets/6ef9f6cd-a76f-43a0-9bdc-8478c77191fc)
-    - [x] ![pic30](https://github.com/user-attachments/assets/de881d48-b9fe-4adb-8737-a91cb966253b)
+    - [x] ![pic29](images/29.jpg)
+    - [x] ![pic30](images/30.jpg)
 - [x] Get tools for compiling kernel
-    - [x] ![pic31](https://github.com/user-attachments/assets/a0212b7f-13ce-4d54-ae3e-688d4f441ecf)
-    - [x] ![pic32](https://github.com/user-attachments/assets/5ebc3f3f-9d60-4fa3-b1f4-7396db2bf030)
+    - [x] ![pic31](images/31.jpg)
+    - [x] ![pic32](images/32.jpg)
 - [x] Do subtask 3
-    - [x] ![pic33](https://github.com/user-attachments/assets/eb126f3e-413c-478c-9dde-bae984919c90)
-    - [x] ![pic34](https://github.com/user-attachments/assets/c315644e-b74e-47ed-b4e8-dadbd3629036)
-    - [x] ![pic35](https://github.com/user-attachments/assets/0aa20744-6635-40d5-8212-82996bbd7519)
+    - [x] ![pic33](images/33.jpg)
+    - [x] ![pic34](images/34.jpg)
+    - [x] ![pic35](images/35.jpg)
 
 ### Section 1.4.2
 
 - [x] Compile kernel
-    - [x] ![pic36](https://github.com/user-attachments/assets/445d2f73-6b8e-46cf-be60-f928dd6b935b)
-    - [x] ![pic37](https://github.com/user-attachments/assets/750c7b2e-8291-49d3-bed0-779979b0d298)
-    - [x] ![pic38](https://github.com/user-attachments/assets/411e6fc3-da86-4357-8ab3-44615392c7d6)
-    - [x] ![pic39](https://github.com/user-attachments/assets/9647c0fb-5c96-4bf7-bf7b-ad66eeab322c)
-    - [x] ![pic40](https://github.com/user-attachments/assets/709d40f7-2252-4338-8dcf-948108cd68a9)
+    - [x] ![pic36](images/36.jpg)
+    - [x] ![pic37](images/37.jpg)
+    - [x] ![pic38](images/38.jpg)
+    - [x] ![pic39](images/39.jpg)
+    - [x] ![pic40](images/40.jpg)
 
 - [x] Install compiled kernel
-    - [x] ![pic41](https://github.com/user-attachments/assets/b8e730dc-4c44-4314-81ad-a49edb916811)
-    - [x] ![pic42](https://github.com/user-attachments/assets/573e8bc6-8c70-4578-a408-dc8b9a71c607)
-    - [x] ![pic43](https://github.com/user-attachments/assets/14f9022a-905e-43f4-830f-1438c0cbffe8)
-    - [x] ![pic44](https://github.com/user-attachments/assets/de96dad8-1962-46fb-936d-313740c88061)
-    - [x] ![pic45](https://github.com/user-attachments/assets/29c0de89-82e8-4837-b27f-c6e5b488c0ff)
+    - [x] ![pic41](images/41.jpg)
+    - [x] ![pic42](images/42.jpg)
+    - [x] ![pic43](images/43.jpg)
+    - [x] ![pic44](images/44.jpg)
+    - [x] ![pic45](images/45.jpg)

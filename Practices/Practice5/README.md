@@ -3,19 +3,19 @@ Student Name of member 1: `Iman Mohammadi`
 Student Name of member 2: `Negar Babashah`
 
   - [x] Read Session Contents.
-    1. [x] ![image](https://github.com/user-attachments/assets/4a52e831-cdd0-41b4-ae70-6549cb399fa6)
-    2. [x] ![image](https://github.com/user-attachments/assets/d205f640-60c9-428b-929b-754193db621e)
-    3. [x] ![image](https://github.com/user-attachments/assets/f50d14f5-cf3a-4370-bb17-bdf84f07cfb4)
+    1. [x] ![image](images/01.png)
+    2. [x] ![image](images/02.png)
+    3. [x] ![image](images/03.png)
 
 ### Section 5.3.1
 
 - [x] Write the `Hello World!` program
-    4. ![image](https://github.com/user-attachments/assets/bd0d12d9-907b-45da-b501-83f4669759c5)
-    5. ![image](https://github.com/user-attachments/assets/27278a1a-5901-4fae-9aba-fa0c60ecc3e7)
+    4. ![image](images/04.png)
+    5. ![image](images/05.png)
     
 - [x] Write the `ls` to `wc` program
-    6. ![image](https://github.com/user-attachments/assets/83305b26-b44b-4ad9-9a93-394c82c2736c)
-    7. ![image](https://github.com/user-attachments/assets/6de265f9-67aa-4e39-910e-27e7c9eeb3f5)
+    6. ![image](images/06.png)
+    7. ![image](images/07.png)
 
 - [x] Investigate how to have a bi-direction pipe
     8. `Two separate pipes must be created to achieve bi-directional communication between two processes. Each pipe allows one-way communication. One pipe can be used for the parent to send data to the child, while the other pipe is used for the child to send data back to the parent. After creating the pipes, proper closing of unused read/write ends in both processes is crucial to avoid deadlocks.`
@@ -35,12 +35,12 @@ Student Name of member 2: `Negar Babashah`
 - [x] Investigate the given code
     15. `This code sets an alarm to send SIGALRM after 5 seconds. The program enters an infinite loop and will terminate when the signal is received. The signal handler is not implemented, so the default action is to terminate the process.`
     16.
-    ![image](https://github.com/user-attachments/assets/89a58a4e-d685-44f9-ac9e-90e21d93e917)
+    ![image](images/08.png)
 
 - [x] Modify the given program by handling SIGALRM
-    17. ![image](https://github.com/user-attachments/assets/bc982189-2485-4627-b77a-862979bea22f)
-    18. ![image](https://github.com/user-attachments/assets/855b6d08-1382-4d93-8777-1075bba54890)
+    17. ![image](images/09.png)
+    18. ![image](images/10.png)
 
 - [x] Write a program that handles Ctrl + C
-    19. ![image](https://github.com/user-attachments/assets/01957527-3f14-4813-8f21-6fe76f1d00be)
-    20. ![image](https://github.com/user-attachments/assets/43c074b2-73a4-4424-8b3b-58e76ee0a7d9)
+    19. ![image](images/11.png)
+    20. ![image](images/12.png)

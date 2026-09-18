@@ -79,11 +79,11 @@ remove:
 
 <div align="center">
 
-![image](https://github.com/user-attachments/assets/ded438b5-5cdc-4f5b-b09f-edf134b920bc)
+![image](images/01.png)
 
-![image](https://github.com/user-attachments/assets/1fb9a8dd-f97d-4db7-9dd8-c38d799ef78a)
+![image](images/02.png)
 
-![image](https://github.com/user-attachments/assets/bf8b9fd8-9bbb-4973-ba52-de5084b20655)
+![image](images/03.png)
 
 </div>
 
@@ -229,7 +229,7 @@ clean:
 
 <div align="center">
 
-![image](https://github.com/user-attachments/assets/4c475e6f-2e6d-4e77-ade7-a7984f2f739b)
+![image](images/04.png)
 
 </div>
 
