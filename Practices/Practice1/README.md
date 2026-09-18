@@ -1,3 +1,11 @@
+# Practice 1: Installing Linux and rebuilding the kernel
+
+Session 1. Official instructions: [session1.md](https://github.com/Sharif-OS-Lab/session-1-2/blob/main/session1.md)
+
+The session asked us to install Debian in a virtual machine, work through a list of basic shell exercises, and then fetch the kernel source, configure it, and build and install a new kernel. I used VMware for the virtual machine; the kernel I built and installed was 5.15.163.
+
+---
+
 Student Name of member 1: `Iman Mohammadi`
 
 Student Name of member 2: `Negar Babashah`
