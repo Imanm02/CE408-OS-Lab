@@ -49,45 +49,25 @@ Student Name of member 2: `Iman Mohammadi`
 
 - [x] Do 13 subtasks from 1 to 13 and add screenshots of each:
 
-    1. [x]
+    1. [x] ![image](images/15.png)
     
-    ![image](images/15.png)
+    2. [x] ![image](images/16.png)
     
-    2. [x]
+    3. [x] ![image](images/17.png)
     
-    ![image](images/16.png)
+    4. [x] ![image](images/18.png)
     
-    3. [x]
-    
-    ![image](images/17.png)
-    
-    4. [x]
-    
-    ![image](images/18.png)
-    
-    5. [x]
-    
-    ![image](images/19.png)
+    5. [x] ![image](images/19.png)
 
-    - [x]
+    - [x] ![image](images/20.png)
 
-    ![image](images/20.png)
-
-    - [x]
-
-    ![image](images/21.png)
+    - [x] ![image](images/21.png)
     
-    7. [x]
-    
-    ![image](images/22.png)
+    7. [x] ![image](images/22.png)
 
-    - [x]
+    - [x] ![image](images/23.png)
 
-    ![image](images/23.png)
-
-    - [x]
-
-    ![image](images/24.png)
+    - [x] ![image](images/24.png)
 
     9. [x] ![image](images/25.png)
 

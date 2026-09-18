@@ -46,7 +46,7 @@ Student Name of member 2: `Iman Mohammadi`
 - [x] Describe the C program (fork program)
     1. [x] تابع fork() در خروجی خود به پردازه‌ی فرزند ۰ و به پردازه‌ی والد pid مربوط به فرزند را خروجی می‌دهد. بنابراین فرزند وارد if اول می‌شود ولی والد نمی‌شود. فرزند وقتی اجرا شود مقدار ۲۳ را برمی‌گرداند. والد که به بخش else رفته است، تا زمانی که فرزند اجرایش تمام نشده باشد wait می‌کند و چیزی که فرزند return کرده باشد را در rc می‌ریزد. که همان طور که نمایش داده شده است، ۲۳ است.
 
-           ![image](images/09.png)
+       ![image](images/09.png)
 
 - [x] Program showing that memory of the parent and the child is seperate
     1. [x] ![image](images/10.png)

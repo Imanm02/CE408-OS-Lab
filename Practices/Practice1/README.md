@@ -49,8 +49,7 @@ Student Name of member 2: `Negar Babashah`
     1. [x] ![pic27](images/27.jpg)
     1. [x] ![pic28](images/28.jpg)
 
-- For subtask 7 write difference between `>` and `>>`
-    - [x]
+- [x] For subtask 7 write difference between `>` and `>>`
 
 <div dir="rtl">
 
