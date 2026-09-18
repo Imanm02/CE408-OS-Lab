@@ -2,9 +2,9 @@
 
 Session 8. Official instructions: [session8.md](https://github.com/Sharif-OS-Lab/session-8/blob/main/session8.md)
 
-Two experiments, both as loadable kernel modules. The first (8.3) walks the system call table and prints the address of every system call. The second (8.4) hooks `getdents64` in that table with our own function so that the contents of the home directory are hidden from tools like `ls`.
+Two experiments, both as loadable kernel modules. The first (8.3) walks the system call table and prints the address of every system call. The second (8.4) hooks `getdents64` in that table with our own function, with the goal of hiding the contents of the home directory from tools like `ls`. The note under 8.4 explains what the code we submitted actually ends up doing.
 
-Each experiment has its own folder here with the source and its `Makefile`: [8.3](8.3) and [8.4](8.4). The build output is not committed; run `make` in either folder against your own kernel headers. These modules write to the live system call table, so load them only in a virtual machine you can throw away.
+Each experiment has its own folder here with the source and its `Makefile`: [8.3](8.3) and [8.4](8.4). The build output is not committed; run `make` in either folder against your own kernel headers. The 8.4 module writes to the live system call table, so load that one only in a virtual machine you can throw away.
 
 ---
 

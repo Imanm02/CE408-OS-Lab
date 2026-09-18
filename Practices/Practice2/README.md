@@ -6,6 +6,8 @@ This session was about system calls: locating the syscall number table in the ke
 
 The four programs for section 2.3.4 are in this folder, one per task: `access_test.c` (`access`), `filework.c` (`open`, `write`, `close`), `memory.c` (`sysinfo`) and `cswitch.c` (`getrusage`).
 
+`filework.c` is as we submitted it apart from the file-mode argument `0644`, added later because `open` needs one when `O_CREAT` is set; the screenshot in 2.3.4 still shows the original two-argument call.
+
 ---
 
 Student Name of member 1: `Negar Babashah`

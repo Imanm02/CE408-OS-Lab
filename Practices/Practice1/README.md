@@ -2,7 +2,9 @@
 
 Session 1. Official instructions: [session1.md](https://github.com/Sharif-OS-Lab/session-1-2/blob/main/session1.md)
 
-The session asked us to install Debian in a virtual machine, work through a list of basic shell exercises, and then fetch the kernel source, configure it, and build and install a new kernel. I used VMware for the virtual machine; the kernel I built and installed was 5.15.163.
+The session asked us to install Debian in a virtual machine, work through a list of basic shell exercises, write up what seven common commands do, and then fetch the kernel source, configure it, and build and install a new kernel. We used VMware, and the kernel we built and installed was 5.15.163.
+
+One thing worth knowing before reading: the spec asks for Debian, but the guest in most of these screenshots is Ubuntu 22.04, so the package names and repository URLs in them are Ubuntu's. Only the first screenshot is from the installer itself; the template asked for three and we kept one.
 
 ---
 

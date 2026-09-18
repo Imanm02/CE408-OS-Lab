@@ -4,7 +4,7 @@ Session 7. Official instructions: [session7.md](https://github.com/Sharif-OS-Lab
 
 The session was an introduction to POSIX threads: creating one with `pthread_create`, checking that all threads of a process report the same PID, seeing that global variables are shared between threads while a `fork`ed child gets its own copy, and passing several values into a thread through a struct.
 
-The programs are in this folder, one per task, in the order the report uses them: `thread.c` (first thread), `thread2.c` (PIDs), `thread3.c` (a shared global), `thread4.c` (sum from 2 to n), `thread5.c` (five threads), `thread6.c` (`global_param`), `thread7.c` (threads next to `fork`) and `thread8.c` (passing a struct).
+The programs are in this folder, one per task, in the order the report uses them: `thread.c` (first thread), `thread2.c` (PIDs), `thread3.c` (a shared global), `thread4.c` (sum from 2 to n), `thread5.c` (five threads), `thread6.c` (two threads incrementing a shared `global_var`), `thread7.c` (threads next to `fork`) and `thread8.c` (passing a struct).
 
 ---
 

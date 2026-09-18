@@ -2,9 +2,9 @@
 
 Session 10. Official instructions: [session-10.md](https://github.com/Sharif-OS-Lab/session-10/blob/main/session-10.md)
 
-Two experiments. The first (10.3) is a hello-world driver: a kernel module that prints a message to the kernel log when it is loaded. The second (10.4) is a network sniffing driver, which I did two ways, as a kernel module registering a netfilter hook that logs the source and destination of every packet, and from user space with a veth pair, `tcpdump` and Wireshark.
+Two experiments. The first (10.3) is a hello-world driver: a kernel module that prints a message to the kernel log when it is loaded. The second (10.4) is a network sniffing driver, which we did two ways, as a kernel module registering a netfilter hook that logs the source and destination of every incoming packet, and from user space with a veth pair, `tcpdump` and Wireshark.
 
-Both modules are listed in full in the report below rather than kept as separate files here. They sit in the packet path, so load them only in a virtual machine you can throw away.
+Both modules are listed in full in the report below rather than kept as separate files here. The sniffer sits in the packet path, and the hello module has no `module_exit` so it cannot be unloaded once inserted. Load either only in a virtual machine you can throw away.
 
 ---
 

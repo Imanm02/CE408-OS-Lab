@@ -4,7 +4,7 @@ Session 5. Official instructions: [session5.md](https://github.com/Sharif-OS-Lab
 
 The session had two halves. The first was inter-process communication over a one-way pipe: passing a string from one process to another, then wiring `ls` into `wc` the way a shell does, and working out what a bi-directional pipe would need. The second was signals: describing the common ones, handling `SIGALRM` with `sigaction` and `pause` so the program continues instead of being killed by the alarm, and writing a program that only exits the second time Ctrl+C is pressed.
 
-I answered this session with screenshots of the code and its output, so there are no `.c` files in this folder.
+We answered this session with screenshots of the code and its output, so there are no `.c` files in this folder.
 
 ---
 
