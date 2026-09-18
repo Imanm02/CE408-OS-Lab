@@ -1,4 +1,4 @@
-# CE408-OS Lab
+# CE408-OS-Lab
 Solutions to Prof. Beigi's CE408: Operating Systems Lab (Sharif University of Technology - Fall 2024) Assignments
 
 ## Overview
